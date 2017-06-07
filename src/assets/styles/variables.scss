@@ -1,0 +1,31 @@
+@import "typography";
+
+$slate: #282828;
+$grey: #666;
+$light-grey: #ddd;
+$red: #C6452B;
+
+// Text
+$text-slate: #333;
+$text-grey: #888;
+
+$green:#3EC556;
+$lightgreen: #8FC49C;
+
+$gold: #d2a021;
+
+$blue: #59A9DA;
+
+$twitter-blue: #4099FF;
+$slack-purple: #5C3A58;
+$slack-green: #20A48E;
+
+$component-padding: 4.2rem 3.6rem;
+
+$color-list: (slate:$slate, grey:$grey, light-grey:$light-grey, red:$red, text-slate:$text-slate, text-grey:$text-grey, green:$green, lightgreen:$lightgreen, gold:$gold, blue:$blue);
+
+@each $color, $var in $color-list {
+	.text--#{$color} {
+		 color: #{$var};
+	}
+}

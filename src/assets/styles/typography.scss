@@ -1,0 +1,25 @@
+$font: "Roboto", sans-serif;
+$font-light: 300;
+
+h1,h2,h3{
+	font-weight: $font-light;
+	font-family: $font;
+}
+
+@mixin font-size-mega{
+  font-size: 5.2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+}
+
+@mixin font-size-lg{
+  font-size: 2.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+@mixin font-size-reg{
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: .8rem;
+}

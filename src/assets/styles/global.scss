@@ -1,0 +1,13 @@
+@import "reset";
+@import "variables";
+@import "grid";
+
+html{
+  font-size: 10px;
+}
+body{
+  font-size: 1.6rem;
+  background-color: #f3f3f3;
+  font-family: $font;
+  font-weight: $font-light;
+}

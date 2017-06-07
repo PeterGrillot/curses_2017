@@ -1,21 +1,45 @@
-# dontsaycursewords
+# Brightfind Info Radiator
 
-> Website for Curse Words build with Vue.js
+Welcome to the Inforadiator Repository! 
+### Technologies
 
-## Build Setup
+We are using the latest and greatest.
+
+**Backend**
+
+- Node 7
+- Express Server
+- Reqwest
+
+**Frontend**
+
+- Vue.js
+- Webpack
+- Sass
+- CSS Grid
+- ES2016 & Babel
+
+**Other Goodies**
+
+- Yarn Package Manager
+- Autoprefixer
+- APIs
+ - Mavenlink
+ - Weather
+ - WMATA (Metro)
+ - Slack
+
+### How To Set up
+
+Clone and install!
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+git clone <url> inforadiator && cd inforadiator
+yarn install
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Run!
+
+```bash
+yarn run prod
+```
