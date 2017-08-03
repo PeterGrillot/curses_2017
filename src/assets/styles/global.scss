@@ -6,6 +6,11 @@ html {
 	font-size: 10px;
 }
 
+a{
+	color: #ff39a1;
+	text-decoration: none;
+}
+
 body {
 	position: relative;
 	font-size: 1.6rem;
@@ -13,6 +18,7 @@ body {
 	background-color: #f3f3f3;
 	background: linear-gradient(135deg, #534c7d, black);
 	color: white;
+	perspective: 500px;
 }
 
 .background {
@@ -51,6 +57,15 @@ body {
 		position: absolute;
 		z-index: 1;
 	}
+}
+
+.twitter{
+    transform: rotateY(-10deg) rotateX(6deg);
+    width: 50vw;
+    background: rgba(21, 21, 21, 0.28);
+    padding: 1rem;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.44);
 }
 
 .container,
