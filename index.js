@@ -4,7 +4,8 @@ const express = require('express')
 const reqwest = require('reqwest')
 const path = require('path')
 const fse = require('fs-extra')
-
+const serveStatic = require('serve-static')
+//https://jsfiddle.net/dcg2ezsu/4/
 // Build out API
 const app = express()
 const weather = require('./server/weather')
@@ -35,18 +36,11 @@ webpack(webpackConfig, function (err, stats) {
 })
 
 app.set('json spaces', 0)
-// app.get('/mavenlink', mavenlink)
 app.get('/weather', weather)
-// app.get('/metro', metro)
-// app.get('/slack', slack)
-// app.get('/github', github)
-// app.get('/definitions', definitions)
 app.get('/twitterfeed', twitterfeed)
 app.get('/instagram', instagram)
 
-
-
-app.use('/', express.static(dist))
+app.use(serveStatic(dist))
 
 app.listen(8080, () => {
 	console.log(`App building in ${process.env.NODE_ENV} mode...
