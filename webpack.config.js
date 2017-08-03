@@ -54,7 +54,7 @@ module.exports = {
       loader: 'babel-loader'
     }, {
       test: /\.scss$/,
-      loaders: 'style-loader!css-loader!sass-loader'
+      loaders: 'style-loader!css-loader?url=false!sass-loader'
     }, {
       test: /\.vue$/,
       loader: 'vue-loader'
@@ -66,7 +66,8 @@ module.exports = {
   resolve: {
     alias: {
       'styles': './assets/styles/global.scss',
-      'vue$': 'vue/dist/vue.min.js'
+      'vue$': 'vue/dist/vue.min.js',
+      'assets': './assets'
     }
   },
   plugins: getPlugins()
