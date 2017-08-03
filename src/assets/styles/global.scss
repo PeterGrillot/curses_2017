@@ -2,12 +2,74 @@
 @import "variables";
 @import "grid";
 
-html{
-  font-size: 10px;
+html {
+	font-size: 10px;
 }
-body{
-  font-size: 1.6rem;
-  background-color: #f3f3f3;
-  font-family: $font;
-  font-weight: $font-light;
+
+a{
+	color: #ff39a1;
+	text-decoration: none;
+}
+
+body {
+	position: relative;
+	font-size: 1.6rem;
+	font-family: $font;
+	background-color: #f3f3f3;
+	background: linear-gradient(135deg, #534c7d, black);
+	color: white;
+	perspective: 500px;
+}
+
+.background {
+	position: absolute;
+	z-index: 1;
+	height: 100vh;
+	width: 100vw;
+	.planet {
+		content: "";
+		background: url(assets/images/planet.png);
+		background-size: cover;
+		width: 100vw;
+		height: 100vh;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+	.crt {
+		content: "";
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAALElEQVQYV2NkYGD4/x9IMAIxAxoDmzhIHfU0gCxFB9S1AacfsFmNJQzAoQIAH84j/OCkeYUAAAAASUVORK5CYII=');
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.1;
+		z-index: 3;
+	}
+	canvas {
+		overflow: hidden;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		z-index: 1;
+	}
+}
+
+.twitter{
+    transform: rotateY(-10deg) rotateX(6deg);
+    width: 50vw;
+    background: rgba(21, 21, 21, 0.28);
+    padding: 1rem;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.44);
+}
+
+.container,
+.navigation {
+	position: relative;
+	z-index: 2;
 }

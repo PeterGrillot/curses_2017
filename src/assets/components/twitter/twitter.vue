@@ -1,6 +1,6 @@
 <template>
 	<div class="twitter" v-if="twitterfeed">
-		<h2><span class="text--twitter-blue"><i class="ion-social-twitter"></i> @Brightfind</span> on Twitter</h2>
+		<h2><span class="text--twitter-blue"><i class="ion-social-twitter"></i>Twitter</h2>
 		<ul>
 			<li v-for="tweet in twitterfeed">
 				<p class="time" v-html="tweet.time"></p>
@@ -36,4 +36,3 @@ export default {
 	}
 }
 </script>
-<style lang="sass" src="./twitter.scss"></style>

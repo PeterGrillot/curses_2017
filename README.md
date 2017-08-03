@@ -1,6 +1,6 @@
-# Brightfind Info Radiator
+# Curse Words
 
-Welcome to the Inforadiator Repository! 
+Welcome to the Curses Repository! 
 ### Technologies
 
 We are using the latest and greatest.
@@ -34,7 +34,7 @@ We are using the latest and greatest.
 Clone and install!
 
 ``` bash
-git clone <url> inforadiator && cd inforadiator
+git clone <url> curses && cd curses
 yarn install
 ```
 
