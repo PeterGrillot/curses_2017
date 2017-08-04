@@ -1,11 +1,18 @@
 let isIncreasing = true;
-const retinaResize = function(canvas, ctx, canvasWidth, canvasHeight) {
+const retinaResize = (canvas, ctx, canvasWidth, canvasHeight) => {
   if (window.devicePixelRatio > 1) {
 	canvas.width = canvasWidth * window.devicePixelRatio;
 	canvas.height = canvasHeight * window.devicePixelRatio;
 	canvas.setAttribute("style", `width:${canvasWidth}px;height:${canvasHeight}px`);
 	ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
   }
+}
+const getDevicePixels = (size) => {
+	if (window.devicePixelRatio > 1) {
+		return size * window.devicePixelRatio;
+	} else {
+		return size;
+	}
 }
 const canvases = document.querySelectorAll('canvas');
 for (let i = 0; i < canvases.length; i++) {
@@ -14,6 +21,7 @@ for (let i = 0; i < canvases.length; i++) {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   retinaResize(canvas, ctx, canvas.width, canvas.height);
+  console.log(retinaResize.exp);
   let counter = 0;
   setInterval(function() {
 	let n = Math.floor(Math.random() * 10);
@@ -22,7 +30,7 @@ for (let i = 0; i < canvases.length; i++) {
 	}
 	ctx.beginPath();
 	ctx.moveTo(counter * n, 0);
-	ctx.lineTo(canvas.width / 4, canvas.height / 3); // dont touch
+	ctx.lineTo(getDevicePixels(canvas.width)/2, getDevicePixels(canvas.height)/2.6); // dont touch
 	ctx.lineWidth = 1;
 	ctx.closePath();
 	ctx.strokeStyle = '#ff39a1';

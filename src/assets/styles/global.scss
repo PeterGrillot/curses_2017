@@ -6,7 +6,7 @@ html {
 	font-size: 10px;
 }
 
-a{
+a {
 	color: #ff39a1;
 	text-decoration: none;
 }
@@ -18,7 +18,6 @@ body {
 	background-color: #f3f3f3;
 	background: linear-gradient(135deg, #534c7d, black);
 	color: white;
-	perspective: 500px;
 }
 
 .background {
@@ -59,13 +58,12 @@ body {
 	}
 }
 
-.twitter{
-    transform: rotateY(-10deg) rotateX(6deg);
-    width: 50vw;
-    background: rgba(21, 21, 21, 0.28);
-    padding: 1rem;
-    border-radius: 3px;
-    border: 1px solid rgba(0, 0, 0, 0.44);
+.twitter {
+	width: 50vw;
+	background: rgba(21, 21, 21, 0.28);
+	padding: 1rem;
+	border-radius: 3px;
+	border: 1px solid rgba(0, 0, 0, 0.44);
 }
 
 .container,
