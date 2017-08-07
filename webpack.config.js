@@ -41,9 +41,9 @@ function getPlugins() {
 }
 
 module.exports = {
-	entry: './src/entry.js',
+	entry: PATHS.app+'/entry.js',
 	output: {
-		path: './dist/assets/js/',
+		path: PATHS.build+'/assets/js/',
 		filename: 'app.js'
 	},
 	watch: true,
