@@ -67,7 +67,12 @@ body {
 		z-index: 1;
 	}
 }
-
+.video{
+	position: relative;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+}
 .twitter {
 	background: rgba(21, 21, 21, 0.28);
 	padding: 1rem;
