@@ -1,5 +1,5 @@
 <template>
-	<div class="twitter" v-if="twitterfeed">
+	<div class="twitter">
 		<h2><span class="text--twitter-blue"><i class="ion-social-twitter"></i>Twitter</h2>
 		<ul>
 			<li v-for="tweet in twitterfeed">
@@ -27,7 +27,7 @@ export default {
 		fetchData: function() {
 
 			const self = this
-			reqwest('twitterfeed', function (resp) {
+			reqwest('./twitterfeed', function (resp) {
 
 			}).then((resp)=> {
 				self.twitterfeed = resp
