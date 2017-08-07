@@ -21,7 +21,6 @@ for (let i = 0; i < canvases.length; i++) {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   retinaResize(canvas, ctx, canvas.width, canvas.height);
-  console.log(retinaResize.exp);
   let counter = 0;
   setInterval(function() {
 	let n = Math.floor(Math.random() * 10);
@@ -30,7 +29,7 @@ for (let i = 0; i < canvases.length; i++) {
 	}
 	ctx.beginPath();
 	ctx.moveTo(counter * n, 0);
-	ctx.lineTo(getDevicePixels(canvas.width)/2, getDevicePixels(canvas.height)/2.6); // dont touch
+	ctx.lineTo(getDevicePixels(canvas.width), getDevicePixels(canvas.height)); // dont touch
 	ctx.lineWidth = 1;
 	ctx.closePath();
 	ctx.strokeStyle = '#ff39a1';

@@ -8,7 +8,6 @@ const serveStatic = require('serve-static')
 //https://jsfiddle.net/dcg2ezsu/4/
 // Build out API
 const app = express()
-const weather = require('./server/weather')
 // const mavenlink = require('./server/mavenlink')
 // const metro = require('./server/metro')
 // const slack = require('./server/slack')
@@ -36,7 +35,6 @@ webpack(webpackConfig, function (err, stats) {
 })
 
 app.set('json spaces', 0)
-app.get('/weather', weather)
 app.get('/twitterfeed', twitterfeed)
 app.get('/instagram', instagram)
 
