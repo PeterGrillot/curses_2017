@@ -22,6 +22,8 @@ export default {
 			reqwest({
 				url:showsURL
 				, contentType: 'application/json'
+				, method: 'GET'
+				,crossOrigin: true
 			}, function (resp) {
 			}).then((resp)=> {
 				console.log(resp)

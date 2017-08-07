@@ -69,17 +69,27 @@ body {
 }
 
 .twitter {
-	width: 50vw;
 	background: rgba(21, 21, 21, 0.28);
 	padding: 1rem;
-	border-radius: 3px;
-	border: 1px solid rgba(0, 0, 0, 0.44);
+}
+
+.header {
+	text-align: center;
 }
 
 .container,
 .navigation {
 	position: relative;
 	z-index: 2;
+}
+
+.navigation ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+	margin: 0;
+	padding: 2rem;
+	font-size: 2rem;
 }
 
 .screen__prompt {
