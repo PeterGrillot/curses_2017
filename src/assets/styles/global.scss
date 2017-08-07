@@ -67,12 +67,18 @@ body {
 		z-index: 1;
 	}
 }
-.video{
+
+.video__wrap {
+	padding: 1rem;
+}
+
+.video {
 	position: relative;
 	z-index: 5;
 	display: flex;
 	justify-content: center;
 }
+
 .twitter {
 	background: rgba(21, 21, 21, 0.28);
 	padding: 1rem;
@@ -155,4 +161,37 @@ body {
 		background: transparent;
 		transform: scale(1, 1);
 	}
+}
+
+@media screen and (max-width: 680px) {
+	svg {
+		width: 100%;
+	}
+	.video {
+		position: relative;
+		padding-bottom: 56.25%;
+		/* 16:9 */
+		padding-top: 25px;
+		height: 0;
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.screen__prompt {
+		padding: 1rem;
+	}
+	li.js-navigation-button {
+		a {
+			font-size: 0;
+		}
+		i{
+			font-size: 3rem;
+		}
+	}
+
+	
 }
