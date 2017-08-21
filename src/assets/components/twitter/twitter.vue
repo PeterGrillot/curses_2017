@@ -1,17 +1,17 @@
 <template>
 	<div class="twitter">
-		<h2><span class="text--twitter-blue"><i class="ion-social-twitter"></i>Twitter</h2>
+		<h2>Twitter</h2>
 		<ul>
 			<li v-for="tweet in twitterfeed">
 				<p class="time" v-html="tweet.time"></p>
-				<p class="tweet" v-html="tweet.text.html"></p>
+				<p class="tweet" v-html="tweet.parsed.html"></p>
 			</li>
 		</ul>
 	</div>
 </template>
 
 <script>
-import reqwest from 'reqwest'
+import axios from 'axios'
 
 export default {
 	name: 'twitter',
@@ -27,10 +27,9 @@ export default {
 		fetchData: function() {
 
 			const self = this
-			reqwest('./twitterfeed', function (resp) {
-
-			}).then((resp)=> {
-				self.twitterfeed = resp
+			axios('./twitterfeed').then((resp)=> {
+				self.twitterfeed = resp.data
+				console.log(resp)
 			})
 		}
 	}

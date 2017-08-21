@@ -19,7 +19,7 @@ $blue: #59A9DA;
 $twitter-blue: #4099FF;
 $laser: #ff39a1;
 
-$component-padding: 4.2rem 3.6rem;
+$component-padding: 2.4rem 3.2rem 1rem;
 
 $color-list: (slate:$slate, grey:$grey, light-grey:$light-grey, red:$red, text-slate:$text-slate, text-grey:$text-grey, green:$green, lightgreen:$lightgreen, gold:$gold, blue:$blue);
 
@@ -27,4 +27,10 @@ $color-list: (slate:$slate, grey:$grey, light-grey:$light-grey, red:$red, text-s
 	.text--#{$color} {
 		 color: #{$var};
 	}
+}
+
+@mixin unlist{
+	list-style: none;
+	padding:0;
+	margin:0;
 }
