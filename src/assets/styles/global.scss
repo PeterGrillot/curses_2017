@@ -18,12 +18,13 @@ body {
 	background-color: #f3f3f3;
 	background: linear-gradient(135deg, #534c7d, black);
 	color: white;
+	overflow-x: hidden;
 }
 
 .background {
 	position: absolute;
 	z-index: 1;
-	height: 100vh;
+	height: 100%;
 	width: 100vw;
 	.crt {
 		content: "";
@@ -78,10 +79,30 @@ body {
 	display: flex;
 	justify-content: center;
 }
-
+.shows{
+	padding: $component-padding;
+	ul{
+		@include unlist;
+		a{
+			color: white;
+			&:hover,
+			&:focus,
+			&:active{
+				color: $laser;
+			}
+		}
+	}
+}
 .twitter {
-	background: rgba(21, 21, 21, 0.28);
-	padding: 1rem;
+	padding: $component-padding;
+	ul{
+		@include unlist;
+		.tweet{
+			img,video{
+				display: none;
+			}
+		}
+	}
 }
 
 .header {
@@ -166,6 +187,9 @@ body {
 @media screen and (max-width: 680px) {
 	svg {
 		width: 100%;
+	}
+	.twitter,.shows{
+		padding: 1rem;
 	}
 	.video {
 		position: relative;
