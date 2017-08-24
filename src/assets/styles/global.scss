@@ -7,8 +7,14 @@ html {
 }
 
 a {
-	color: #ff39a1;
+	color: $blue;
 	text-decoration: none;
+	&:hover,
+	&:focus,
+	&:active{
+		color: lighten(#39fcff, 20%);
+	}
+
 }
 
 body {
