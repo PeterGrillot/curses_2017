@@ -19,12 +19,16 @@ a {
 
 body {
 	position: relative;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	font-family: $font;
 	background-color: #f3f3f3;
 	background: linear-gradient(135deg, #534c7d, black);
 	color: white;
 	overflow-x: hidden;
+}
+
+[v-cloak] {
+  display: none;
 }
 
 .background {
@@ -72,6 +76,7 @@ body {
 		height: 100vh;
 		position: absolute;
 		z-index: 1;
+		opacity: 0.3;
 	}
 }
 
@@ -89,14 +94,6 @@ body {
 	padding: $component-padding;
 	ul{
 		@include unlist;
-		a{
-			color: white;
-			&:hover,
-			&:focus,
-			&:active{
-				color: $laser;
-			}
-		}
 	}
 }
 .twitter {
@@ -143,7 +140,7 @@ body {
 		top: 0;
 	}
 	to {
-		top: 100%;
+		top: 99%;
 	}
 }
 

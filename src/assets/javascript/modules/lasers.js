@@ -18,9 +18,9 @@ const canvases = document.querySelectorAll('canvas');
 for (let i = 0; i < canvases.length; i++) {
   let canvas = canvases[i];
   let ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  retinaResize(canvas, ctx, canvas.width, canvas.height);
+  canvas.width = window.innerWidth/10;
+  canvas.height = window.innerHeight/10;
+  // retinaResize(canvas, ctx, canvas.width, canvas.height);
   let counter = 0;
   setInterval(function() {
 	let n = Math.floor(Math.random() * 10);

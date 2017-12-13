@@ -1,6 +1,6 @@
 const express = require('express')
 const moment = require('moment')
-var tweetToHTML = require('tweet-to-html')
+var tweetToHTML = require('./tweet-to-html')
 
 require('env2')('.env')
 const Twitter = require('twitter')
@@ -20,7 +20,7 @@ const twitterfeed = (req, res) => {
 	  	
 	    for (var i = 0; i < 4; i++) {
 	    	let set = {}
-	    	set['time'] = moment(tweets[i].created_at, 'dd MMM DD HH:mm:ss ZZ YYYY').format('MMM D');
+	    	set['time'] = moment(tweets[i].created_at, 'dd MMM DD HH:mm:ss ZZ YYYY').format('MMMD');
 	    	set['parsed'] = tweetToHTML.parse(tweets[i])
 	    	blob.push(set)
 	    }
