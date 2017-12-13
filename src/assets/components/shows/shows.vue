@@ -4,7 +4,7 @@
 		<ul class="shows__list" v-if="shows">
 			<li class="show__item" v-for="show in shows">
 				<a :href="show.gsx$url.$t" target="_blank">
-					<span v-if="show.gsx$date.$t">{{show.gsx$date.$t}} | </span>
+					<span v-if="show.gsx$date.$t">{{show.gsx$date.$t}} > </span>
 				</a>
 				<span v-if="show.gsx$roster.$t">{{show.gsx$roster.$t}} | </span>
 				<span v-if="show.gsx$venue.$t">{{show.gsx$venue.$t}} | </span>
