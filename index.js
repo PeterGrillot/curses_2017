@@ -5,15 +5,9 @@ const reqwest = require('reqwest')
 const path = require('path')
 const fse = require('fs-extra')
 const serveStatic = require('serve-static')
-//https://jsfiddle.net/dcg2ezsu/4/
 // Build out API
 const app = express()
-// const mavenlink = require('./server/mavenlink')
-// const metro = require('./server/metro')
-// const slack = require('./server/slack')
 const twitterfeed = require('./server/twitter')
-// const github = require('./server/github')
-// const definitions = require('./server/definitions')
 const instagram = require('./server/instagram')
 
 const webpack = require('webpack')

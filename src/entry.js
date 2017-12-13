@@ -7,7 +7,7 @@ const Twitter = require('./assets/components/twitter/twitter.vue')
 require('styles')
 
 // Vanilla JS
-require('./assets/javascript/stuff.js')
+require('./assets/javascript/scripts.js')
 
 // Build Vue
 new Vue({
